@@ -1,83 +1,126 @@
 <!DOCTYPE html>
 <html lang="th">
-<head> รวมผลงานทั้งหมด
-<meta charset="UTF-8" />
-<title> Arthur lolppap </title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Arthur lolppap | Portfolio AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="รวมผลงาน AR และ 3D Model ของ Arthur lolppap" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header>
-<div class="main-title"> กองทัพหนูโจ๋</div>
-<div class="sub-title">รวบรวมผลงานอันบรรณ์เจิด (AR)</div>
+  <h1>รวมผลงานทั้งหมด</h1>
+  <div class="main-title">กองทัพหนูโจ๋</div>
+  <div class="sub-title">รวบรวมผลงานอันบรรณ์เจิด (AR)</div>
 </header>
 
-<!-- สาวสวยสุดแซ็ปหลาย -->
-<div class="ar-section">
-<div class="head-title"> พี่สาว มาแล้วนะ !!! </div>
-<div class="sub-title">Concept design สาวสวยๆ ที่พร้อมจะเข้ามาหา คุณได้ทุกเมื้อ </div>
-<model-viewer id="model1"
-     src="ตัวละคร 01 ทำที่เว็บมา.glb"
-     ios-src="ตัวละคร 01 ทำที่เว็บมา.usdz"
-     ar
-     ar-modes="scene-viewer webxr quick-look"
-     camera-controls
-     autoplay
-     auto-rotate
-     shadow-intensity="1"
-     shadow-softness="1"
-     environment-image="neutral.hdr"
-     loading="eager"
-     reveal="auto"
-     style="width: 100%; height: 400px;">
-</model-viewer>
-<button class="ar-button" onclick="triggerAR('model1')">Play AR</button>
-</div>
+<!-- Section 1 -->
+<section class="ar-section">
+  <div class="head-title">พี่สาว มาแล้วนะ !!!</div>
+  <div class="sub-title">
+    Concept design สาวสวย ๆ ที่พร้อมจะเข้ามาหาคุณได้ทุกเมื่อ
+  </div>
 
-<!-- ไอเมฆ ใหญ่ๆ เบิ้มๆ -->
-<div class="ar-section">
-<div class="head-title">Sinual</div>
-<div class="sub-title">The design concept เมฆผู้เปลี่ยนตัวเองได้ทุกเมื้อ</div>
+  <model-viewer
+    id="model1"
+    src="character01.glb"
+    ios-src="character01.usdz"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    shadow-softness="1"
+    environment-image="neutral"
+    loading="eager"
+    reveal="auto"
+    style="width:100%; height:400px;">
+  </model-viewer>
 
-<model-viewer id="model2"
-     src="ตัวละคร 01 ทำที่เว็บมา.glb"
-     ios-src="ตัวละคร 01 ทำที่เว็บมา.usdz"
-     ar
-     ar-modes="scene-viewer webxr quick-look"
-     camera-controls
-     autoplay
-     auto-rotate
-     shadow-intensity="1"
-     shadow-softness="1"
-     environment-image="neutral.hdr"
-     loading="eager"
-     reveal="auto"
-     style="width: 100%; height: 400px;">
-</model-viewer>
-<button class="ar-button" onclick="triggerAR('model2')">Play AR</button>
-</div>
+  <button class="ar-button" onclick="triggerAR('model1')">
+    ▶ Play AR
+  </button>
+</section>
+
+<!-- Section 2 -->
+<section class="ar-section">
+  <div class="head-title">Sinual</div>
+  <div class="sub-title">
+    The design concept เมฆผู้เปลี่ยนตัวเองได้ทุกเมื่อ
+  </div>
+
+  <model-viewer
+    id="model2"
+    src="character01.glb"
+    ios-src="character01.usdz"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    shadow-softness="1"
+    environment-image="neutral"
+    loading="lazy"
+    reveal="auto"
+    style="width:100%; height:400px;">
+  </model-viewer>
+
+  <button class="ar-button" onclick="triggerAR('model2')">
+    ▶ Play AR
+  </button>
+</section>
 
 <footer>
-<div class="footer-link"><strong>Facebook:</strong> <a href="https://www.facebook.com/arthur.lolppap/" target="_blank">facebook.com/mushroomsstudio</a></div>
-<div class="footer-link"><strong>IG :</strong> <a href="https://www.instagram.com/arturia_lolppap/" target="_blank">mushroom-studio.com</a></div>
+  <div class="footer-link">
+    <strong>Facebook:</strong>
+    <a href="https://www.facebook.com/arthur.lolppap/" 
+       target="_blank" 
+       rel="noopener">
+       facebook.com/mushroomsstudio
+    </a>
+  </div>
+
+  <div class="footer-link">
+    <strong>Instagram:</strong>
+    <a href="https://www.instagram.com/arturia_lolppap/" 
+       target="_blank" 
+       rel="noopener">
+       instagram.com/arturia_lolppap
+    </a>
+  </div>
 </footer>
 
-<!-- ✅ โหลด model-viewer หลังสุดเพื่อให้โหลดหน้าเว็บเร็วขึ้น -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!-- Load model-viewer -->
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 
-<!-- ✅ Script ปุ่ม Play AR พร้อม catch error -->
+<!-- AR Button Script -->
 <script>
-   function triggerAR(id) {
-     const viewer = document.getElementById(id);
-     if (viewer && viewer.activateAR) {
-       viewer.activateAR().catch((error) => {
-         alert("AR ไม่พร้อมบนอุปกรณ์นี้ หรือถูกบล็อกโดย browser\n(แนะนำให้กดปุ่ม AR บนมุมขวาของโมเดลแทน)");
-         console.warn("activateAR failed:", error);
-       });
-     }
-   }
+function triggerAR(id) {
+  const viewer = document.getElementById(id);
+
+  if (!viewer) {
+    console.warn("Model not found:", id);
+    return;
+  }
+
+  if (viewer.activateAR) {
+    viewer.activateAR().catch((error) => {
+      alert("AR ไม่พร้อมบนอุปกรณ์นี้ หรือถูกบล็อกโดย browser\n(ลองกดปุ่ม AR บนตัวโมเดลแทน)");
+      console.warn("activateAR failed:", error);
+    });
+  } else {
+    alert("อุปกรณ์นี้ไม่รองรับ AR");
+  }
+}
 </script>
 
 </body>
