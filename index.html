@@ -72,7 +72,12 @@
     style="width:100%; height:400px;">
   </model-viewer>
 
-  <!-- Section 3 -->
+  <button class="ar-button" onclick="triggerAR('model2')">
+    ▶ Play AR
+  </button>
+</section>
+
+<!-- Section 3 -->
 <section class="ar-section">
   <div class="head-title">ไอเหลี่ยมพเนจอร์ !!!</div>
   <div class="sub-title">
@@ -80,9 +85,9 @@
   </div>
 
   <model-viewer
-    id="model2"
-    src="....."
-    ios-src="......"
+    id="model3"
+    src="cube01.glb"
+    ios-src="cube01.usdz"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
@@ -94,8 +99,8 @@
     reveal="auto"
     style="width:100%; height:400px;">
   </model-viewer>
-  
-  <button class="ar-button" onclick="triggerAR('model2')">
+
+  <button class="ar-button" onclick="triggerAR('model3')">
     ▶ Play AR
   </button>
 </section>
