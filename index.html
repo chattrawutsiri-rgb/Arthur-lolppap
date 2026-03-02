@@ -4,12 +4,9 @@
   <meta charset="UTF-8" />
   <title>Arthur lolppap | Portfolio AR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="รวมผลงาน AR และ 3D Model ของ Arthur lolppap" />
+  <meta name="description" content="รวมผลงาน AR และ 3D Model" />
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -21,132 +18,111 @@
   <div class="sub-title">รวบรวมผลงานอันบรรณ์เจิด (AR)</div>
 </header>
 
+<!-- ===================== -->
 <!-- Section 1 -->
+<!-- ===================== -->
 <section class="ar-section">
-  <div class="head-title">พี่สาว มาแล้วนะ !!!</div>
-  <div class="sub-title">
-    Concept design สาวสวย ๆ ที่พร้อมจะเข้ามาหาคุณได้ทุกเมื่อ
-  </div>
+  <h2>พี่สาว มาแล้วนะ !!!</h2>
+  <p>Concept design สาวสวย ๆ ที่พร้อมจะเข้ามาหาคุณได้ทุกเมื่อ</p>
 
   <model-viewer
-    id="model1"
+    id="ตัวละคร 01 ทำที่เว็บมา.usdz"
     src="ตัวละคร 01 ทำที่เว็บมา.glb"
-    ios-src="ตัวละคร 01 ทำที่เว็บมา.usdz"
+    ios-src="model1.usdz"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
     shadow-intensity="1"
-    shadow-softness="1"
     environment-image="neutral"
-    loading="eager"
-    reveal="auto"
     style="width:100%; height:400px;">
   </model-viewer>
 
-  <button class="ar-button" onclick="triggerAR('model1')">
-    ▶ Play AR
-  </button>
+  <button onclick="triggerAR('model1')">▶ Play AR</button>
 </section>
 
+<!-- ===================== -->
 <!-- Section 2 -->
+<!-- ===================== -->
 <section class="ar-section">
-  <div class="head-title">ไอเมฆใหญ่เบิ่มๆ !!!</div>
-  <div class="sub-title">
-    The design concept เมฆผู้เปลี่ยนตัวเองได้ทุกเมื่อ
-  </div>
+  <h2>ไอเมฆใหญ่เบิ้มๆ !!!</h2>
+  <p>The design concept เมฆผู้เปลี่ยนตัวเองได้ทุกเมื่อ</p>
 
   <model-viewer
     id="model2"
-    src="ตัวละคร 01 ทำที่เว็บมา.glb"
-    ios-src="ตัวละคร 01 ทำที่เว็บมา.usdz"
+    src="model2.glb"
+    ios-src="model2.usdz"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
     shadow-intensity="1"
-    shadow-softness="1"
     environment-image="neutral"
-    loading="lazy"
-    reveal="auto"
     style="width:100%; height:400px;">
   </model-viewer>
 
-  <button class="ar-button" onclick="triggerAR('model2')">
-    ▶ Play AR
-  </button>
+  <button onclick="triggerAR('model2')">▶ Play AR</button>
 </section>
 
-<!-- Section 3 -->
+<!-- ===================== -->
+<!-- Section 3 (ใส่งานใหม่ตรงนี้) -->
+<!-- ===================== -->
 <section class="ar-section">
-  <div class="head-title">ไอเหลี่ยมพเนจอร์ !!!</div>
-  <div class="sub-title">
-    The design concept ........
-  </div>
+  <h2>ชื่องานชิ้นที่ 3 ใส่ตรงนี้</h2>
+  <p>รายละเอียดของงานชิ้นที่ 3</p>
 
   <model-viewer
     id="model3"
-    src="cube01.glb"
-    ios-src="cube01.usdz"
+    src="model3.glb"
+    ios-src="model3.usdz"
     ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
     shadow-intensity="1"
-    shadow-softness="1"
     environment-image="neutral"
-    loading="lazy"
-    reveal="auto"
     style="width:100%; height:400px;">
   </model-viewer>
 
-  <button class="ar-button" onclick="triggerAR('model3')">
-    ▶ Play AR
-  </button>
+  <button onclick="triggerAR('model3')">▶ Play AR</button>
 </section>
 
 <footer>
-  <div class="footer-link">
-    <strong>Facebook:</strong>
-    <a href="https://www.facebook.com/arthur.lolppap/" 
-       target="_blank" 
-       rel="noopener">
-       facebook.com/Arthur lolppap
+  <p>
+    Facebook:
+    <a href="https://www.facebook.com/arthur.lolppap/" target="_blank" rel="noopener">
+      facebook.com/arthur.lolppap
     </a>
-  </div>
+  </p>
 
-  <div class="footer-link">
-    <strong>Instagram:</strong>
-    <a href="https://www.instagram.com/arturia_lolppap/" 
-       target="_blank" 
-       rel="noopener">
-       instagram.com/arturia_lolppap
+  <p>
+    Instagram:
+    <a href="https://www.instagram.com/arturia_lolppap/" target="_blank" rel="noopener">
+      instagram.com/arturia_lolppap
     </a>
-  </div>
+  </p>
 </footer>
 
-<!-- Load model-viewer -->
+<!-- model-viewer -->
 <script type="module"
   src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
 
-<!-- AR Button Script -->
 <script>
 function triggerAR(id) {
   const viewer = document.getElementById(id);
 
   if (!viewer) {
-    console.warn("Model not found:", id);
+    alert("ไม่พบโมเดล");
     return;
   }
 
   if (viewer.activateAR) {
-    viewer.activateAR().catch((error) => {
-      alert("AR ไม่พร้อมบนอุปกรณ์นี้ หรือถูกบล็อกโดย browser\n(ลองกดปุ่ม AR บนตัวโมเดลแทน)");
-      console.warn("activateAR failed:", error);
+    viewer.activateAR().catch(() => {
+      alert("อุปกรณ์นี้ไม่รองรับ AR หรือถูกบล็อก");
     });
   } else {
-    alert("อุปกรณ์นี้ไม่รองรับ AR");
+    alert("Browser ไม่รองรับ AR");
   }
 }
 </script>
